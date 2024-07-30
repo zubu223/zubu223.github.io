@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>reviews</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+  color: inherit;
+  text-decoration: underline
+  }
+  a:hover {
+  font-style: italic
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    padding: 5px 0;
+    z-index: 10;
+    text-align: center;
+  }
+  .post-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .media-container {
+	display: flex;
+	background-color: #333;
+	}
+  .media-container img {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+  }
+  .media-container .text {
+	padding-left: 15px;
+	text-align: left;
+	font-size: 1.25em
+  }
+  .button {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    background: gray;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background: #333;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var imageScale = 0.40; 
+    var image = document.querySelector('.media-container img');
+    if(image) {
+      image.style.width = (imageScale * 100) + '%';
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html" class="button">back</a>
+</div>
+
+<div class="post-container">
+  <article>
+    <h2>movie reviews</h2>
+    <div class="media-container">
+      <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8OKmBV5BUFzmozIC3pPWKHy17kx.jpg" alt="poster of the 1954 film Seven Samurai">
+	  <div class="text">
+		  <h2 style="line-height: 0.5"><a href="reviews/seven-samurai.html">Seven Samurai</a></h2>
+		  <h2 style="line-height: 0.4">1954</h2>
+		  <h3 style="line-height: 0.01">Akira Kurosawa</h3>
+		  <p style="line-height: 0.1; font-weight: bold">07-28-2024</p>
+		  <strong style="font-size: 0.85em">a timeless film about<br>one of the most timeless<br>human instincts, violence.</strong>
+	  </div>
+    </div>
+  </article>
+</div>
+
+</body>
+</html>

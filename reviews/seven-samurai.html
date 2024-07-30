@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>seven samurai</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+  color: inherit;
+  text-decoration: underline
+  }
+  a:hover {
+  font-style: italic
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    padding: 5px 0;
+    z-index: 10;
+    text-align: center;
+  }
+  .post-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .media-container {
+	display: flex;
+	background-color: #333;
+	}
+  .media-container img {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+  }
+  .media-container .text {
+	padding-left: 15px;
+	text-align: left;
+	font-size: 1.25em
+  }
+  .button {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    background: gray;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background: #333;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var imageScale = 1.5; 
+    var image = document.querySelector('.media-container img');
+    if(image) {
+      image.style.width = (imageScale * 100) + '%';
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="header">
+  <a href="../reviews.html" class="button">back</a>
+</div>
+
+<div class="post-container">
+  <article>
+    <div class="media-container">
+	<img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8OKmBV5BUFzmozIC3pPWKHy17kx.jpg" alt="poster of the 1954 film Seven Samurai">
+	  <div class="text">
+		  <h2 style="line-height: 0.5">Seven Samurai</h2>
+		  <h2 style="line-height: 0.4">1954</h2>
+		  <h3 style="line-height: 0.01">Akira Kurosawa</h3>
+		  <p style="line-height: 0.1;">07-28-2024</p>
+		  <p style="line-height: 0.9; font-weight: bold; font-style: italic">a timeless film on one of the most timeless human instincts, violence.</p>
+		  <p>i'm not a weeb i just like kurosawa. his camerawork is impeccable as usual, each frame comes alive. you barely even notice it's black and white, don't know how the guy even did that man. seriously. the goat fr.<br><br>the acting is great and combined with the excellent writing provides some damn good characterization. makes me wanna use some fancy words to describe it's themes. <p style="font-style: italic; font-weight: bold">ahem<br><br> A most poignant exploration of war and its toll is demonstrated by one of the films final lines spoken by the lead Samurai.<br>"The victory belongs to the peasants, not to us."<br>War takes from everyone except the uninvolved. The film asks us to reflect on heroism and the price of peace.</p><br>alright that's all about i can take of that fancy bullshit, movie's great go see it you've had 70 years to do so don't wait another 70 mmkay thanks</p>
+	  </div>
+    </div>
+  </article>
+</div>
+
+</body>
+</html>
