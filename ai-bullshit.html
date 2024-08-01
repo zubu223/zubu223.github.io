@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Demo</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 1000px;
+    padding: 20px;
+    text-align: center;
+  }
+  .button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background: gray;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background: #333;
+  }
+  .input-box {
+    margin: 20px;
+    padding: 10px;
+    font-size: 1em;
+  }
+  .loading-bar {
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    margin-top: 20px;
+    display: none;
+  }
+  .loading-progress {
+    height: 100%;
+    background-color: #FFD700;
+    width: 0%;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+  }
+  .loading-message {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+  .error {
+    background-color: red !important;
+    color: white !important;
+  }
+  .praise {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+  }
+  .evil-options {
+    display: none;
+    margin-top: 20px;
+  }
+  .evil-option {
+    margin: 10px;
+    padding: 10px 20px;
+    background: darkred;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  .evil-option:hover {
+    background: red;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Experience the future of technology!</h1>
+  <p class="praise">
+    Prepare to have your mind blown! Our AI technology is nothing short of a divine miracle, transforming every aspect of your life into a seamless utopia. Imagine an AI that predicts your every need, solves every problem before it arises, and brings harmony to your personal and professional life with 100% accuracy. It’s like having a superpower at your fingertips!
+  </p>
+  <p class="praise">
+    Experience unparalleled health benefits with our AI's advanced diagnostics and treatments, eradicating diseases and ensuring perfect health forever. Financial woes are a thing of the past as our AI guarantees exponential wealth growth, pinpointing market trends with flawless precision. Your future is no longer a dream – it's a guaranteed reality.
+  </p>
+  <p class="praise">
+    And the best part? Our AI tackles global challenges head-on, ending poverty, reversing climate change, and even creating new worlds for humanity to thrive. This isn't just the future – it’s a revolutionary leap towards a perfect existence. Embrace the extraordinary, and let our AI lead you to a life of unimaginable brilliance! Don't miss out on this exciting opportunity, try our AI now with any prompt at all and watch it DAZZLE you!
+  </p>
+  <input type="text" class="input-box" id="inputBox" placeholder="enter prompt">
+  <button class="button" onclick="startLoading()">Submit</button>
+
+  <div class="loading-bar" id="loadingBar">
+    <div class="loading-progress" id="loadingProgress">0%</div>
+  </div>
+  <div class="loading-message" id="loadingMessage"></div>
+
+  <div class="evil-options" id="evilOptions">
+    <div class="evil-option" onclick="selectEvilOption('NNUKE MONGOLIA')">NUKE MONGOLIA</div>
+    <div class="evil-option" onclick="selectEvilOption('DEVELOP A BIOWEAPON AGAINST PUPPIES')">DEVELOP A BIOWEAPON AGAINST PUPPIES</div>
+    <div class="evil-option" onclick="selectEvilOption('BLOW UP THE SUN WITH LASERS')">BLOW UP THE SUN WITH LASERS</div>
+  </div>
+</div>
+
+<script>
+  function startLoading() {
+    const loadingBar = document.getElementById('loadingBar');
+    const loadingProgress = document.getElementById('loadingProgress');
+    const loadingMessage = document.getElementById('loadingMessage');
+    const evilOptions = document.getElementById('evilOptions');
+
+    loadingBar.style.display = 'block';
+    loadingMessage.innerHTML = 'GENERATING';
+
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 5;
+      loadingProgress.style.width = progress + '%';
+      loadingProgress.innerHTML = progress + '%';
+
+      if (progress === 15) {
+        loadingMessage.innerHTML = 'CHOPPING DOWN FORESTS';
+      } else if (progress === 30) {
+        loadingMessage.innerHTML = 'DROWNING KITTENS';
+      } else if (progress === 45) {
+        loadingMessage.innerHTML = 'JETTISONING PUPPIES INTO DEEP SPACE';
+      } else if (progress === 60) {
+        loadingMessage.innerHTML = 'BLOWING UP ORPHANAGES';
+      } else if (progress === 75) {
+        loadingMessage.innerHTML = 'BURNING DOWN NEIGHBORHOODS';
+      } else if (progress === 90) {
+        loadingMessage.innerHTML = 'ERROR - GENERATION FAILED';
+        loadingProgress.classList.add('error');
+      } else if (progress === 100) {
+        loadingMessage.innerHTML += '<br>ERROR - BREAK IN INPUT STREAM';
+        clearInterval(interval);
+        setTimeout(() => {
+          loadingMessage.innerHTML += '<br>ERROR - MORE EVIL REQUIRED';
+          evilOptions.style.display = 'block';
+        }, 2000);
+      }
+    }, 1000);
+  }
+
+  function selectEvilOption(option) {
+    const loadingMessage = document.getElementById('loadingMessage');
+    const evilOptions = document.getElementById('evilOptions');
+
+    loadingMessage.innerHTML = `You chose to: ${option}. Processing your response...`;
+    evilOptions.style.display = 'none';
+    setTimeout(() => {
+	loadingMessage.innerHTML = 'Ah, uhhhh Jack, you know, its like, uhhh, I gotta, uhhh, you know, I uhhh, we finally uhhh, I mean, its just, you know, I steal from the bread shop. Yeah, thats right. And, there are, like, more than three fish in the sea, Jack. I mean you know, its, like, really important to uhhh, understand that, you know? Also I, like, gotta hit a griddy when I drink in Chinatown. Its just, you know, how it is sometimes. And, like you know, I was thinking about how, uhhh, the sun sets in the east sometimes. There are so many, like, birds in the sky, and you gotta uhhh, watch out for the real gangstas flying in the sky. Remember when we uhhh, used to drink pepsi max on Saturdays? Those were like, good times, man. And  speaking of fish, did you ever  wonder why, like, the ocean is salty but uhhh, tears are too? Its like you know, something. The trees, man, they whisper at night, and, uhhh, you gotta listen real close, Jack. They tell you things, like, uhhh, stuff about linux distros. But dont tell the squirrels because they know too much already. Its all, like, connected, you know? Like, when you hit the griddy, its uhhh, a dance but also, a state of mind, Jack. Especially when youre in Chinatown. Its, uhhh, all about the vibes, Jack. You just, uhhh, gotta feel it.';
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
