@@ -18,14 +18,51 @@
     margin: 5px 0px;
     padding: 10px 20px;
     background: gray;
+    colour: white;
     color: white;
     text-decoration: none;
     font-size: 1.5em;
     transition: background-color 0.3s;
+    cursor: pointer;
   }
   .button:hover {
     background: #333;
   }
+
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    min-width: 200px;
+    z-index: 50;
+    text-align: left;
+    border: 1px solid #222;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    colour: white;
+    color: white;
+    font-size: 1.3em;
+  }
+
+  .dropdown-content hr {
+    border: 0;
+    border-top: 1px solid #222;
+    margin: 0;
+  }
+
+  .dropdown-content a:hover {
+    background: #333;
+  }
+
   #handle {
     font-size: 2em;
     margin-top: 20px;
@@ -38,24 +75,20 @@
     font-size: 2em;
     margin-top: 0px;
   }
+
   .banner-bottom {
-	text-color: white;
     background-color: red;
+    colour: white;
     color: white;
     font-size: 2em;
     padding: 10px 0;
     position: fixed;
     width: 100%;
+    text-align: centre;
     text-align: center;
     z-index: 1000;
-  }
-  .banner-top {
-    top: 0;
-  }
-  .banner-bottom {
     bottom: 0;
   }
-  
 </style>
 </head>
 <body>
@@ -67,13 +100,34 @@
 <a href="about_me.html" class="button">about me</a>
 <a href="portfolio.html" class="button">portfolio</a>
 <a href="blog.html" class="button">blog</a>
-<a href="reviews.html" class="button">reviews</a>
+
+<div class="dropdown">
+  <div class="button" id="reviews-button">reviews</div>
+  <div class="dropdown-content" id="reviews-menu">
+    <a href="movie-reviews.html">movies</a>
+    <hr>
+    <a href="book-reviews.html">books</a>
+  </div>
+</div>
+
 <a href="contact.html" class="button">contact</a>
 
 <div id="clock-label">est time</div>
 <div id="clock"></div>
 
 <script>
+  document.getElementById("reviews-button").addEventListener("click", function() {
+    var menu = document.getElementById("reviews-menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  });
+
+  document.addEventListener("click", function(event) {
+    var dropdown = document.querySelector(".dropdown");
+    if (!dropdown.contains(event.target)) {
+      document.getElementById("reviews-menu").style.display = "none";
+    }
+  });
+
   function updateClock() {
     var now = new Date(); 
     var hours = now.getUTCHours() - 5; 
