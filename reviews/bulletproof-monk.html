@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>touch</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+  color: inherit;
+  text-decoration: underline
+  }
+  a:hover {
+  font-style: italic
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    padding: 5px 0;
+    z-index: 10;
+    text-align: center;
+  }
+  .post-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .media-container {
+	display: flex;
+	background-color: #333;
+	}
+  .media-container img {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+  }
+  .media-container .text {
+	padding-left: 15px;
+	text-align: left;
+	font-size: 1.25em
+  }
+  .button {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    background: gray;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background: #333;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var imageScale = 1.5; 
+    var image = document.querySelector('.media-container img');
+    if(image) {
+      image.style.width = (imageScale * 100) + '%';
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="header">
+  <a href="../reviews.html" class="button">back</a>
+</div>
+
+<div class="post-container">
+  <article>
+    <div class="media-container">
+	<img src="https://www.themoviedb.org/t/p/w600_and_h900_face/3n8HM3fNi9eTk2pj1eblP52iWJY.jpg" alt="poster of the 2003 film Bulletproof Monk">
+	  <div class="text">
+		  <h2 style="line-height: 1.2"><a href="reviews/bulletproof-monk.html">Bulletproof Monk</a></h2>
+		  <h2 style="line-height: 0.4">2003</h2>
+		  <h3 style="line-height: 0.01">Paul Hunter</h3>
+		  <p style="line-height: 0.1; font-weight: bold">11-27-2025</p>
+		  <p style="line-height: 0.9; font-weight: bold; font-style: italic">that monk is bulletproof, yo!</p>
+		  <p>
+		  holy fuck this movie is incredible man. look, if you go into a bargain-bin DVD titled "Bulletproof Monk" with expectations of cinematic mastery <strong>you</strong> are the only one to blame for your disappointment.<br>
+		  that is, you would be if this wasn't one of the greatest cinematic experiences a person can have in this day and age of AI slop and short-form brainrotting instagram reels.<br>
+		  chow yun fat is the second greatest hong kong actors of all time, only behind jackie chan and you, yes you! get to watch him play an immortal monk fighting nazi's for control over the scroll of infinite power.<br>
+		  VERDICT:<br>
+		  <strong style="font-size: 2em">SUPER HOT FIRE/10</strong><br>
+		  IT BREAKS THE SCALE BABEYYYYYYYYYYYY WATCH IT NOW
+		  </p>
+	  </div>
+    </div>
+  </article>
+</div>
+
+</body>
+</html>
