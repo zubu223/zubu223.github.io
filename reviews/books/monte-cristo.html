@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>excellent book</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+  color: inherit;
+  text-decoration: underline
+  }
+  a:hover {
+  font-style: italic
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    padding: 5px 0;
+    z-index: 10;
+    text-align: center;
+  }
+  .post-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .media-container {
+	display: flex;
+	background-color: #333;
+	}
+  .media-container img {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+  }
+  .media-container .text {
+	padding-left: 15px;
+	text-align: left;
+	font-size: 1.25em
+  }
+  .button {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    background: gray;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background: #333;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var imageScale = 1.75; 
+    var image = document.querySelector('.media-container img');
+    if(image) {
+      image.style.width = (imageScale * 100) + '%';
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="header">
+  <a href="../../book-reviews.html" class="button">back</a>
+</div>
+
+<div class="post-container">
+  <article>
+    <div class="media-container">
+	<img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1724863997i/7126.jpg" alt="cover of the book the count of monte cristo by alexandre dumas">
+	  <div class="text">
+        <h2 style="line-height: 1.2"><a href="reviews/books/monte-cristo.html">The Count of Monte Cristo</a></h2>
+        <h2 style="line-height: 0.4">1844</h2>
+        <h3 style="line-height: 0.01">Alexandre Dumas</h3>
+        <p style="line-height: 0.1; font-weight: bold">12-20-2025</p>
+        <strong style="font-size: 0.85em; font-style: italic">holy peak</strong>
+		  <p>
+		  this book is very long. that being said, it is an excellent book that will not fail to keep you engaged at any point. <br>
+		  the plot is great, the characters are well defined and everyone is a little bit insane. it might even make you *shudder* feel some kind of endearment towards france. <br><br>
+		  the protagonist, edmond dantes is a wonderful character and the prototypical "good man pushed too far" cliche protagonist, except not just a cheap power-fantasy self insert.<br>
+		  dantes is a very insane person (anyone would be after what he goes through) who by chance or divine providence gains a hell of a lot of money. the guy is ridiculously rich. <br><br>
+		  diamonds and gemstones just spew from his fingertips, he hands them out like candy and dantes LOVES to flex. so much he invents a new persona as the count of an island with no inhabitants. <br>
+		  if he lived in 2025 he would be a hypebeast wearing supreme and gucci and he would dazzle his house guests with platters of dubai chocolate and 24k gold labubus.<br><br>
+		  VERDICT:<br>
+		  <strong style="font-size: 2em">10/10 BOOK</strong><br>
+		  read it someday or watch the movie or something because this story is excellent.
+		  </p>
+	  </div>
+    </div>
+  </article>
+</div>
+
+</body>
+</html>

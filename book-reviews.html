@@ -67,7 +67,7 @@
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    var imageScale = 0.40; 
+    var imageScale = 0.75; 
     var images = document.querySelectorAll('.media-container img');
     images.forEach(function(image) {
       image.style.width = (imageScale * 100) + '%';
@@ -83,7 +83,17 @@
 
 <div class="post-container">
   <article>
-    <h2>under construction<br>check back later</h2>
+    <h2>movie reviews</h2>
+    <div class="media-container">
+      <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1724863997i/7126.jpg" alt="cover of the book the count of monte cristo by alexandre dumas">
+      <div class="text">
+        <h2 style="line-height: 1.2"><a href="reviews/books/monte-cristo.html">The Count of Monte Cristo</a></h2>
+        <h2 style="line-height: 0.4">1844</h2>
+        <h3 style="line-height: 0.01">Alexandre Dumas</h3>
+        <p style="line-height: 0.1; font-weight: bold">12-20-2025</p>
+        <strong style="font-size: 0.85em; font-style: italic">holy peak</strong>
+      </div>
+    </div>
   </article>
 </div>
 
