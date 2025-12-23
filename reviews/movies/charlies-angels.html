@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>charlie's angels</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+  color: inherit;
+  text-decoration: underline
+  }
+  a:hover {
+  font-style: italic
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    padding: 5px 0;
+    z-index: 10;
+    text-align: center;
+  }
+  .post-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .media-container {
+	display: flex;
+	background-color: #333;
+	}
+  .media-container img {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+  }
+  .media-container .text {
+	padding-left: 15px;
+	text-align: left;
+	font-size: 1.25em
+  }
+  .button {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    background: gray;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background: #333;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var imageScale = 1.5; 
+    var image = document.querySelector('.media-container img');
+    if(image) {
+      image.style.width = (imageScale * 100) + '%';
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="header">
+  <a href="../../movie-reviews.html" class="button">back</a>
+</div>
+
+<div class="post-container">
+  <article>
+    <div class="media-container">
+	<img src="https://image.tmdb.org/t/p/w600_and_h900_face/iHTmZs0BmkwMCYi8rhvMWC5G4EM.jpg" alt="poster of the 2000 Charlie's Angels">
+	  <div class="text">
+		  <h2 style="line-height: 1.2">Charlie's Angels</h2>
+		  <h2 style="line-height: 0.4">2000</h2>
+		  <h3 style="line-height: 0.01">McG</h3>
+		  <p style="line-height: 0.1; font-weight: bold">12-23-2025</p>
+		  <p style="line-height: 0.9; font-weight: bold; font-style: italic">insane and kinda terrible</p>
+		  <p>
+		  the best part of this movie is the cast. lucy liu, drew barrymore, cameron diaz, freakin bill murry and tim curry!<br>
+		  can't ask for a better cast for an action comedy. honestly it's a perfect cast. they absolutely CARRY this film. <br>
+		  because the writing and directing is not doing any favours, lmao. what the hell is the first half of this movie. <br><br>
+		  the first half of this movie is terrible and really the only redeeming quality is the acting. god bless the actors they really did their best with what they were given!<br>
+		  the second half however, it really picks up. the villains are much better, the stakes are higher, and the action is downright good.<br>
+		  that being said, i wonder how many plans would have succeeded without a hitch if the bad guys just hired gay henchmen.<br><br>
+		  VERDICT:<br>
+		  <strong style="font-size: 2em">6.7/10</strong><br>
+		  watch it if you are down bad for lucy liu
+		  </p>
+	  </div>
+    </div>
+  </article>
+</div>
+
+</body>
+</html>
