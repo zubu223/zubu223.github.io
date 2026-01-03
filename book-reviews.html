@@ -42,7 +42,6 @@
     margin-bottom: 10px;
   }
   .media-container img {
-    width: 40%;
     height: auto;
     margin: 5px;
   }
@@ -65,16 +64,19 @@
     background: #333;
   }
 </style>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    var imageScale = 0.75; 
+    var defaultScale = 0.5;
     var images = document.querySelectorAll('.media-container img');
     images.forEach(function(image) {
-      image.style.width = (imageScale * 100) + '%';
+      var customScale = image.dataset.scale ? parseFloat(image.dataset.scale) : defaultScale;
+      image.style.width = (customScale * 100) + '%';
     });
   });
 </script>
 </head>
+
 <body>
 
 <div class="header">
@@ -83,9 +85,23 @@
 
 <div class="post-container">
   <article>
-    <h2>movie reviews</h2>
+    <h2>book reviews</h2>
     <div class="media-container">
-      <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1724863997i/7126.jpg" alt="cover of the book the count of monte cristo by alexandre dumas">
+      <img src="https://m.media-amazon.com/images/I/71soZLtyl4L._AC_UF1000,1000_QL80_.jpg"
+		   data-scale="0.49"
+           alt="cover of the book mansfield park by jane austen">
+      <div class="text">
+        <h2 style="line-height: 1.2"><a href="reviews/books/mansfield-park.html">Mansfield Park</a></h2>
+        <h2 style="line-height: 0.4">1814</h2>
+        <h3 style="line-height: 0.01">Jane Austen</h3>
+        <p style="line-height: 0.1; font-weight: bold">01-03-2026</p>
+        <strong style="font-size: 0.85em; font-style: italic">(DNF) sweet home alabamashire</strong>
+      </div>
+    </div>
+    <div class="media-container">
+      <img src="https://m.media-amazon.com/images/I/811iBn28JdL.jpg"
+           data-scale="0.75"
+           alt="cover of the book the count of monte cristo by alexandre dumas">
       <div class="text">
         <h2 style="line-height: 1.2"><a href="reviews/books/monte-cristo.html">The Count of Monte Cristo</a></h2>
         <h2 style="line-height: 0.4">1844</h2>
